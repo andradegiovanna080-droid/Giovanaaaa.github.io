@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    overflow-x:hidden;
+}
+
+h1{
+    text-align:center;
+    padding:20px;
+    font-size:40px;
+}
+
+.info,.cpu{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+#mesa{
+    min-height:180px;
+    margin:20px auto;
+    width:95%;
+    background:#334155;
+    border-radius:20px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+#mano{
+    width:95%;
+    margin:auto;
+    min-height:150px;
+    background:#1e293b;
+    border-radius:20px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.ficha{
+    width:70px;
+    height:120px;
+    background:white;
+    border-radius:12px;
+    border:3px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    transition:.2s;
+    overflow:hidden;
+}
+
+.ficha:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.linea{
+    width:100%;
+    height:3px;
+    background:black;
+}
+
+.lado{
+    flex:1;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    place-items:center;
+    padding:5px;
+}
+
+.punto{
+    width:10px;
+    height:10px;
+    background:black;
+    border-radius:50%;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    margin:20px 10px;
+}
+
+button:hover{
+    background:#0ea5e9;
+}
+
+.botones{
+    text-align:center;
+}
+
+#mensaje{
+    text-align:center;
+    font-size:22px;
+    margin-top:10px;
+    color:#facc15;
+}
+
+@media(max-width:600px){
+  .ficha{
+        width:55px;
+        height:95px;
+    }
+
+  .punto{
+        width:8px;
+        height:8px;
+    }
+}
